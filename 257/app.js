@@ -1,9 +1,20 @@
-// console.log(document);
-// console.dir(document);
+let paragraphElement=document.querySelector('p');
 
-//document.body.children[1].children[0].href='https://www.google.com/'
-let anchorElement=document.getElementById('external-link');
-anchorElement.href='https://google.com';
+function changeParagraphText(){
+    paragraphElement.textContent='Clicked!';
+    console.log('Paragraph clicked!');
+}
 
-anchorElement=document.querySelector('p a');
-anchorElement.href='https://naver.com';
+paragraphElement.addEventListener('click',changeParagraphText);
+
+let inputElement=document.querySelector('input');
+
+function retrieveUserInput(event){
+   // let enteredText=inputElement.value;
+   let enteredText=event.target.value;
+   //let enteredText=event.data; 문자한개씩 log됨
+    console.log(enteredText);
+
+}
+
+inputElement.addEventListener('input',retrieveUserInput);

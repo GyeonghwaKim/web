@@ -28,3 +28,18 @@
 //    you selected in (4) and set it to any other text of your choice
 
 highlightedParagraph.textContent=('Hi I\'m max!');
+
+let newAnchorelement=document.createElement('a');
+newAnchorelement.href='https://google.com';
+newAnchorelement.textContent='This lead to Google';
+
+let firstParagraph=document.querySelector('p');
+
+firstParagraph.append(newAnchorelement);
+
+let firstH1Element=document.querySelector('h1');
+firstH1Element.remove();
+
+firstParagraph.parentElement.append(firstParagraph);
+firstParagraph.innerHTML="hi This is <strong>important!</strong>"
+
