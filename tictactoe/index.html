@@ -9,14 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/overlays.css">
+    <link rel="stylesheet" href="styles/configuration.css">
 </head>
 <body>
+    <div id="backdrop"></div>
     <header id="main-header">
-        <h1>Play Tic, Tack, Toe</h1>
+        <h1>Play Tic, Tac, Toe</h1>
         <p>Built with HTML, CSS, JavaScirpt and -of course - lots of love!</p>
     </header>
     <main>
-        <aside>
+        <aside class="modal" id="config-overlay">
             <header>
             <h2>Choose your name</h2></header>
             <form action="">
@@ -25,8 +28,8 @@
                     <input type="text" name="playername" id="playername"/>
                 </div>
                 <div>
-                    <button type="button">Cancel</button>
-                    <button type="submit">Comfirm</button>
+                    <button type="button" class="btn btn-alt">Cancel</button>
+                    <button type="submit" class="btn">Comfirm</button>
                 </div>
             </form>
         </aside>
@@ -37,7 +40,7 @@
                         <h2>Player 1</h2>
                         <h3>PLAYER NAME</h3>
                         <p>X</p>
-                        <button>Edit</button>
+                        <button class="btn btn-alt">Edit</button>
                     </article>
                 </li>
                 <li>
@@ -45,11 +48,11 @@
                         <h2>Player 2</h2>
                         <h3>PLAYER NAME</h3>
                         <p>O</p>
-                        <button>Edit</button>
+                        <button class="btn btn-alt">Edit</button>
                     </article>
                 </li>
             </ol>
-            <button>Start New Game</button>
+            <button class="btn btn-alts">Start New Game</button>
         </section>
         <section id="active-game">
             <article>
