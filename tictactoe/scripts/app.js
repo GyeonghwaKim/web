@@ -1,3 +1,11 @@
+let editedPlayer=0;
+
+const players=[
+    {name:'',Symbol:'X'},
+    {name:'',Symbol:'O'}
+
+];
+
 const playerConfigOverlayElement=document.getElementById('config-overlay');
 const backdropElement=document.getElementById('backdrop');
 const cancelConfigBtnElement=document.getElementById('cancel-config-btn');
@@ -15,3 +23,4 @@ backdropElement.addEventListener('click',closePlayerConfig);
 
 
 formElement.addEventListener('submit',savePlayerConfig);
+

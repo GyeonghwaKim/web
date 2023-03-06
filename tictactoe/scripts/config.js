@@ -1,4 +1,8 @@
-function openPlayerConfig(){
+
+
+function openPlayerConfig(event){
+    editedPlayer=+event.target.dataset.playerid;
+    
     playerConfigOverlayElement.style.display='block'; //block 보이기 none 안보이기
     backdropElement.style.display='block';
 }
@@ -8,6 +12,7 @@ function closePlayerConfig(){
     backdropElement.style.display='none';
     formElement.firstElementChild.classList.remove('error');
     errorsOutputElement.textContent='';
+    formElement.firstElementChild.lastElementChild.value=''; //<-?
 }
 function savePlayerConfig(event){
     event.preventDefault();
@@ -19,5 +24,11 @@ function savePlayerConfig(event){
         errorsOutputElement.textContent='Please enter a valid name!';
         return;
     }
-    
+    const updatePlayerDataElement=document.getElementById('player-' + editedPlayer +'-data');
+    updatePlayerDataElement.children[1].textContent=enteredPlayername;
+
+    players[editedPlayer-1].name=enteredPlayername;
+
+    closePlayerConfig();
 }
+
